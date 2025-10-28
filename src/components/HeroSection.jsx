@@ -1,123 +1,32 @@
-// import { ArrowDown } from "lucide-react";
-
-// export const HeroSection = () => {
-//   return (
-//     <section
-//       id="hero"
-//       className="relative min-h-screen flex flex-col items-center justify-center px-4"
-//     >
-//       <div className="container max-w-4xl mx-auto text-center z-10">
-//         <div className="space-y-6">
-//           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-//             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-//             <span className="text-primary opacity-0 animate-fade-in-delay-1">
-//               {" "}
-//               Pedro
-//             </span>
-//             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-//               {" "}
-//               Machado
-//             </span>
-//           </h1>
-
-//           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-//             I create stellar web experiences with modern technologies.
-//             Specializing in front-end development, I build interfaces that are
-//             both beautiful and functional.
-//           </p>
-
-//           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-//             <a href="#projects" className="cosmic-button">
-//               View My Work
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-//         <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-//         <ArrowDown className="h-5 w-5 text-primary" />
-//       </div>
-//     </section>
-//   );
-// };
-
-
-
-
-
-
-
-
-
-import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
-import gsap from "gsap";
 
 export const HeroSection = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 });
-
-      tl.from(".hero-title span", {
-        opacity: 0,
-        y: 50,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: "power3.out",
-      })
-        .from(
-          ".hero-text",
-          {
-            opacity: 0,
-            y: 30,
-            duration: 0.8,
-            ease: "power2.out",
-          },
-          "-=0.4"
-        )
-        .from(
-          ".hero-btn",
-          {
-            opacity: 0,
-            scale: 0.8,
-            duration: 0.6,
-            ease: "back.out(1.7)",
-          },
-          "-=0.3"
-        );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
-      {/* Floating glowing background circles */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
-          <h1 className="hero-title text-4xl md:text-6xl font-bold tracking-tight">
-            <span>Hi, I'm</span>
-            <span className="text-primary ml-2">Hassan</span>
-            <span className="text-gradient ml-2">Khan</span>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
+            <span className="text-primary opacity-0 animate-fade-in-delay-1">
+              {" "}
+              Pedro
+            </span>
+            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+              {" "}
+              Machado
+            </span>
           </h1>
 
-          <p className="hero-text text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I create stellar web experiences with modern technologies.
             Specializing in front-end development, I build interfaces that are
             both beautiful and functional.
           </p>
 
-          <div className="pt-4 hero-btn">
+          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
               View My Work
             </a>
@@ -126,12 +35,103 @@ export const HeroSection = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
     </section>
   );
 };
+
+
+
+
+
+
+
+
+
+// import { useEffect, useRef } from "react";
+// import { ArrowDown } from "lucide-react";
+// import gsap from "gsap";
+
+// export const HeroSection = () => {
+//   const sectionRef = useRef(null);
+
+//   useEffect(() => {
+//     const ctx = gsap.context(() => {
+//       const tl = gsap.timeline({ delay: 0.3 });
+
+//       tl.from(".hero-title span", {
+//         opacity: 0,
+//         y: 50,
+//         stagger: 0.2,
+//         duration: 0.8,
+//         ease: "power3.out",
+//       })
+//         .from(
+//           ".hero-text",
+//           {
+//             opacity: 0,
+//             y: 30,
+//             duration: 0.8,
+//             ease: "power2.out",
+//           },
+//           "-=0.4"
+//         )
+//         .from(
+//           ".hero-btn",
+//           {
+//             opacity: 0,
+//             scale: 0.8,
+//             duration: 0.6,
+//             ease: "back.out(1.7)",
+//           },
+//           "-=0.3"
+//         );
+//     }, sectionRef);
+
+//     return () => ctx.revert();
+//   }, []);
+
+//   return (
+//     <section
+//       ref={sectionRef}
+//       id="hero"
+//       className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
+//     >
+//       {/* Floating glowing background circles */}
+//       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+//       <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+
+//       <div className="container max-w-4xl mx-auto text-center z-10">
+//         <div className="space-y-6">
+//           <h1 className="hero-title text-4xl md:text-6xl font-bold tracking-tight">
+//             <span>Hi, I'm</span>
+//             <span className="text-primary ml-2">Hassan</span>
+//             <span className="text-gradient ml-2">Khan</span>
+//           </h1>
+
+//           <p className="hero-text text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+//             I create stellar web experiences with modern technologies.
+//             Specializing in front-end development, I build interfaces that are
+//             both beautiful and functional.
+//           </p>
+
+//           <div className="pt-4 hero-btn">
+//             <a href="#projects" className="cosmic-button">
+//               View My Work
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+//         <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+//         <ArrowDown className="h-5 w-5 text-primary" />
+//       </div>
+//     </section>
+//   );
+// };
 
 
 
