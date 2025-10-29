@@ -250,12 +250,12 @@ export const Navbar = () => {
         {/* Avatar Logo */}
         <a href="#hero" className="flex items-center gap-3">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" // 👈 male avatar
+            src="https://media.licdn.com/dms/image/v2/D4E03AQHmqQv1UG4Z0w/profile-displayphoto-scale_100_100/B4EZn7NK.9HgAc-/0/1760856159984?e=1763596800&v=beta&t=ArXBuKXnvFBARckwlddm7nG9n_uDHPLc2rv2jqUJztg" // 👈 male avatar
             alt="Avatar"
             className="w-10 h-10 rounded-full border border-primary/40 hover:border-primary/80 transition-all duration-300 shadow-sm bg-white p-1"
           />
           <span className="text-xl font-bold text-primary hidden sm:inline">
-            Portfolio
+            m.hassan
           </span>
         </a>
 
