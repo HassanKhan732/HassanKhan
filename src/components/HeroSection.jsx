@@ -137,7 +137,7 @@ export const HeroSection = () => {
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
 I'm an AI-Driven Web Developer & Data Analyst who builds intelligent, high-performance web applications and transforms complex data into clear, actionable insights.  
-Merging cutting-edge front-end expertise with powerful data analytics, I create digital experiences that don't just look good — they think.
+Merging cutting-edge front-end expertise with powerful data analytics, I create digital experiences that don't just look good they think.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
